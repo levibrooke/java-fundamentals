@@ -1,5 +1,5 @@
 public class Main {
-  public static void main() {
+  public static void main(String[] args) {
     int dogCount = 1;
     System.out.println("I own " + dogCount + " " + pluralize("dog", dogCount) + ".");
 
