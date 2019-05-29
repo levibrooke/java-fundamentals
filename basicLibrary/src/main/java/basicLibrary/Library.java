@@ -32,4 +32,19 @@ public class Library {
         }
         return avg / inputArray.length;
     }
+
+    public static int[] arrayWithLowestAvg(int[][] inputArray) {
+
+        int lowest = 0;
+        double avg = calculateAverage(inputArray[0]);
+
+        for (int i = 1; i < inputArray.length; i++) {
+
+            if (avg > calculateAverage(inputArray[i])) {
+                avg = calculateAverage(inputArray[i]);
+                lowest = i;
+            }
+        }
+        return inputArray[lowest];
+    }
 }
