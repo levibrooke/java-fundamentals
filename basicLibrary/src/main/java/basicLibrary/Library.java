@@ -3,6 +3,8 @@
  */
 package basicLibrary;
 
+import java.util.Arrays;
+
 public class Library {
     public static int[] roll(int rolls) {
         int[] result = new int[rolls];
@@ -11,5 +13,15 @@ public class Library {
             result[i] = (int) Math.ceil(Math.random() * 6);
         }
         return result;
+    }
+
+    public static boolean containsDuplicates(int[] inputArray) {
+        Arrays.sort(inputArray);
+        for (int i = 1; i < inputArray.length; i++) {
+            if (inputArray[i - 1] == inputArray[i]) {
+                return true;
+            }
+        }
+        return false;
     }
 }

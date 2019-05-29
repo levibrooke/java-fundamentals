@@ -31,4 +31,15 @@ public class LibraryTest {
         // how do I test if the values in expectedOutput are <= 6?
         // I would loop through it and then assert what?
     }
+
+    @Test
+    public void testContainsDuplicates() {
+        Library classUnderTest = new Library();
+        int[] inputArray = {1, 2, 3, 3, 5};
+        boolean result = classUnderTest.containsDuplicates(inputArray);
+
+        System.out.println(result);
+
+        assertTrue("expected true result", result);
+    }
 }
