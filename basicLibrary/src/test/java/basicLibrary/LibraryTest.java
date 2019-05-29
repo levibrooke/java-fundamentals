@@ -42,4 +42,17 @@ public class LibraryTest {
 
         assertTrue("expected true result", result);
     }
+
+    @Test
+    public void testAvg() {
+        Library classUnderTest = new Library();
+        int[] inputArray = {1, 2, 3};
+        double expectedOutput = 2;
+
+        double result = classUnderTest.calculateAverage(inputArray);
+
+        System.out.println(result);
+
+        assertEquals(expectedOutput, result, 0);
+    }
 }

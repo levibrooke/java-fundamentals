@@ -24,4 +24,12 @@ public class Library {
         }
         return false;
     }
+
+    public static double calculateAverage(int[] inputArray) {
+        double avg = 0;
+        for (int i = 0; i < inputArray.length; i++) {
+            avg += inputArray[i];
+        }
+        return avg / inputArray.length;
+    }
 }
