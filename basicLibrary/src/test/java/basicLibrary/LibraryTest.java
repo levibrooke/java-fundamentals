@@ -4,11 +4,31 @@
 package basicLibrary;
 
 import org.junit.Test;
+
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
+
+    @Test
+    public void testRollLength() {
         Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+        int inputVal = 8;
+        int[] expectedOutput = classUnderTest.roll(inputVal);
+
+        System.out.println(Arrays.toString(expectedOutput));
+
+        assertEquals(expectedOutput.length, 8);
+    }
+
+    @Test
+    public void testRollContents() {
+        Library classUnderTest = new Library();
+        int inputVal = 8;
+        int[] expectedOutput = classUnderTest.roll(inputVal);
+
+        // how do I test if the values in expectedOutput are <= 6?
+        // I would loop through it and then assert what?
     }
 }

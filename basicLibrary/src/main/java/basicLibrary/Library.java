@@ -4,7 +4,12 @@
 package basicLibrary;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    public static int[] roll(int rolls) {
+        int[] result = new int[rolls];
+
+        for (int i = 0; i < rolls; i++) {
+            result[i] = (int) Math.ceil(Math.random() * 6);
+        }
+        return result;
     }
 }
