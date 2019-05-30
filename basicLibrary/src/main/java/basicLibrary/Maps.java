@@ -22,7 +22,7 @@ public class Maps {
             }
         }
 
-        String result = new String();
+        String result = "";
         result += "High: " + max + "\nLow: " + min;
 
         for (int i = min + 1; i < max; i++) {
