@@ -33,4 +33,33 @@ public class Maps {
 
         return result;
     }
+
+    public static String tally(List<String> inputList) {
+        String result = "";
+        HashMap<String, Integer> tallyList = new HashMap<>();
+
+        for (int i = 0; i < inputList.size(); i++) {
+            if (!tallyList.containsKey(inputList.get(i))) {
+                tallyList.put(inputList.get(i), 1);
+            }
+            else if (tallyList.containsKey(inputList.get(i))) {
+                tallyList.put(inputList.get(i), tallyList.get(inputList.get(i)) + 1);
+            }
+        }
+
+        System.out.println(tallyList);
+
+        int highestVote = 0;
+
+        for (Map.Entry<String, Integer> entry : tallyList.entrySet()) {
+            if (entry.getValue() > highestVote) {
+                result = entry.getKey();
+                highestVote = entry.getValue();
+            }
+        }
+
+        System.out.println(result);
+
+        return result;
+    }
 }

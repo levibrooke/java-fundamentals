@@ -1,6 +1,10 @@
 package basicLibrary;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class MapsTest {
@@ -49,5 +53,24 @@ public class MapsTest {
         System.out.print(result);
 
         assertNotEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testTally() {
+        Maps classUnderTest = new Maps();
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        String result = classUnderTest.tally(votes);
+
+        assertEquals("Bush", result);
     }
 }
