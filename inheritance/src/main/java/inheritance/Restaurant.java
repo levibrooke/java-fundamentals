@@ -19,6 +19,11 @@ public class Restaurant {
     }
 
     public String addReview(Review newReview) {
+        // add conditional check to see if review and restaurant belong together
+        if (newReview.getRestaurant() != this.name) {
+            throw new IllegalArgumentException("This review doesn't belong to this restaurant.");
+        }
+
         this.reviews.add(newReview);
 
         this.rating = Math.round(this.rating + newReview.getStars() / this.reviews.size());
