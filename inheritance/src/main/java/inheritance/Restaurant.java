@@ -26,7 +26,7 @@ public class Restaurant {
 
         this.reviews.add(newReview);
 
-        this.rating = Math.round(this.rating + newReview.getStars() / this.reviews.size());
+        this.rating = this.rating + newReview.getStars();
 
         return "Review successfully added.";
     }
@@ -37,5 +37,9 @@ public class Restaurant {
 
     public int getRating() {
         return this.rating;
+    }
+
+    public int getAverageRating() {
+        return Math.round(this.getRating() / this.reviews.size());
     }
 }
