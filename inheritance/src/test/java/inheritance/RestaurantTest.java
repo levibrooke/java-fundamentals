@@ -8,10 +8,36 @@ public class RestaurantTest {
 
     @Test
     public void toStringTest() {
-        Restaurant classUnderTest = new Restaurant("Test Restaurant", 3, 2);
+        Restaurant classUnderTest = new Restaurant("Test Restaurant", 2);
 
         assertEquals("test constructor and toString method",
                 "A restaurant named Test Restaurant, with 3 stars and is in 2 price category",
                 classUnderTest.toString());
+    }
+
+    @Test
+    public void addReviewTest() {
+        Review newReview = new Review("This is a review.", "A Reviewer", 2, "Test Restaurant");
+
+        Restaurant newRestaurant = new Restaurant("A Restaurant", 2);
+
+        assertEquals("test add review",
+                "Review successfully added.",
+                newRestaurant.addReview(newReview));
+    }
+
+    @Test
+    public void checkRestaurantRating() {
+        Review newReview = new Review("This is a review.", "A Reviewer", 2, "Test Restaurant");
+
+        Review anotherReview = new Review("This is a review.", "A Reviewer", 3, "Test Restaurant");
+
+        Restaurant newRestaurant = new Restaurant("A Restaurant", 2);
+
+        newRestaurant.addReview(newReview);
+        newRestaurant.addReview(anotherReview);
+
+        assertEquals(3,
+                newRestaurant.getRating());
     }
 }
