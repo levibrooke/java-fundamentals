@@ -20,4 +20,8 @@ public class Review {
     public int getStars() {
         return this.stars;
     }
+
+    public String getRestaurant() {
+        return this.restaurant;
+    }
 }

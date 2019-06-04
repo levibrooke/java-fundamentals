@@ -32,7 +32,7 @@ public class RestaurantTest {
 
         Review anotherReview = new Review("This is a review.", "A Reviewer", 3, "Test Restaurant");
 
-        Restaurant newRestaurant = new Restaurant("A Restaurant", 2);
+        Restaurant newRestaurant = new Restaurant("Test Restaurant", 2);
 
         newRestaurant.addReview(newReview);
         newRestaurant.addReview(anotherReview);
