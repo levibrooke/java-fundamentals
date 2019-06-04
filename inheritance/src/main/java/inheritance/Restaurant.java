@@ -15,7 +15,7 @@ public class Restaurant {
     }
 
     public String toString() {
-        return String.format("A restaurant named %s, with %d stars and is in %d price category", this.name, this.rating, this.priceCategory);
+        return String.format("A restaurant named %s and is in %d price category", this.name, this.priceCategory);
     }
 
     public String addReview(Review newReview) {

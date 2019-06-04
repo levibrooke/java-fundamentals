@@ -11,7 +11,7 @@ public class RestaurantTest {
         Restaurant classUnderTest = new Restaurant("Test Restaurant", 2);
 
         assertEquals("test constructor and toString method",
-                "A restaurant named Test Restaurant, with 3 stars and is in 2 price category",
+                "A restaurant named Test Restaurant and is in 2 price category",
                 classUnderTest.toString());
     }
 
