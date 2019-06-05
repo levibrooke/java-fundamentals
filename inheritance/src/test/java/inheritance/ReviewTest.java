@@ -8,7 +8,9 @@ public class ReviewTest {
 
     @Test
     public void toStringTest() {
-        Review classUnderTest = new Review("This is a review.", "A Reviewer", 2, "Test Restaurant");
+        Restaurant newRestaurant = new Restaurant("Test Restaurant", 2);
+
+        Review classUnderTest = new Review("This is a review.", "A Reviewer", 2, newRestaurant);
 
         assertEquals("test constructor and toString method",
                 "A review: This is a review. \n By: A Reviewer \n Stars: 2",

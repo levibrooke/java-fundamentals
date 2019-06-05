@@ -17,9 +17,8 @@ public class RestaurantTest {
 
     @Test
     public void addReviewTest() {
-        Review newReview = new Review("This is a review.", "A Reviewer", 2, "Test Restaurant");
-
         Restaurant newRestaurant = new Restaurant("A Restaurant", 2);
+        Review newReview = new Review("This is a review.", "A Reviewer", 2, newRestaurant);
 
         assertEquals("test add review",
                 "Review successfully added.",
@@ -27,12 +26,12 @@ public class RestaurantTest {
     }
 
     @Test
+    // this test is currently broken bc i need to fix my rating calc
     public void checkRestaurantRating() {
-        Review newReview = new Review("This is a review.", "A Reviewer", 2, "Test Restaurant");
-
-        Review anotherReview = new Review("This is a review.", "A Reviewer", 3, "Test Restaurant");
-
         Restaurant newRestaurant = new Restaurant("Test Restaurant", 2);
+        Review newReview = new Review("This is a review.", "A Reviewer", 2, newRestaurant);
+
+        Review anotherReview = new Review("This is a review.", "A Reviewer", 3, newRestaurant);
 
         newRestaurant.addReview(newReview);
         newRestaurant.addReview(anotherReview);
