@@ -1,9 +1,8 @@
 package inheritance;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class Restaurant {
+public class Restaurant implements Business {
     private String name;
     private int rating;
     private int priceCategory;
@@ -20,15 +19,20 @@ public class Restaurant {
 
     public String addReview(Review newReview) {
         // add conditional check to see if review and restaurant belong together
-        if (newReview.getRestaurant() != this.name) {
-            throw new IllegalArgumentException("This review doesn't belong to this restaurant.");
-        }
+//        if (newReview.getBusiness() != this.name) {
+//            throw new IllegalArgumentException("This review doesn't belong to this restaurant.");
+//        }
 
         this.reviews.add(newReview);
 
-        this.rating = Math.round(this.rating + newReview.getStars() / this.reviews.size());
+        // rating calculation needs fixing
+//        this.rating = Math.round(this.rating + newReview.getStars() / this.reviews.size());
 
         return "Review successfully added.";
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public ArrayList<Review> getReviews() {
