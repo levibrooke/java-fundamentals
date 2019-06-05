@@ -4,9 +4,9 @@ public class Review {
     private String body;
     private String author;
     private int stars;
-    private String restaurant;
+    private Restaurant restaurant;
 
-    public Review(String body, String author, int stars, String restaurant) {
+    public Review(String body, String author, int stars, Restaurant restaurant) {
         this.body = body;
         this.author = author;
         this.stars = stars;
@@ -21,7 +21,7 @@ public class Review {
         return this.stars;
     }
 
-    public String getRestaurant() {
+    public Restaurant getRestaurant() {
         return this.restaurant;
     }
 }
